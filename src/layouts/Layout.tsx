@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Layout = (props) => {
-  return (
-    <div>Element here</div>
-  );
-}
+type Props = {
+	children?: React.ReactNode;
+};
+
+const Layout: React.FC<Props> = ({children}) => {
+	return (
+		<div className='bg-gray-900 h-screen text-white py-10 w-full'>{children}</div>
+	);
+};
 
 export default Layout;
